@@ -1,0 +1,22 @@
+{
+  "name": "RIVAS_GUILLAUME_7_06_2022",
+  "version": "1.0.0",
+  "description": "Projet7: les petits plats",
+  "main": "scripts/pages/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YayaRivas/Rivas_Guillaume_P7_06_2022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YayaRivas/Rivas_Guillaume_P7_06_2022/issues"
+  },
+  "homepage": "https://github.com/YayaRivas/Rivas_Guillaume_P7_06_2022#readme",
+  "devDependencies": {
+    "eslint": "^8.11.0"
+  }
+}
