@@ -1,0 +1,26 @@
+.btnFilter {
+  width: 170px;
+  height: 70px;
+  border-radius: 6px;
+  margin: 0 20px 25px 0;
+  font-size: 1.05em;
+  font-weight: bold;
+  color: white;
+}
+
+.btnTag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  padding: 8px 15px;
+  color: white;
+  font-weight: bold;
+  margin: 0 20px 15px 0;
+  /* suppression apparence button */
+  cursor: pointer;
+  border: none;
+}
+.btnTag img {
+  padding-left: 13px;
+}

@@ -1,0 +1,261 @@
+/* import fichier css */
+@import url("base.css");
+@import url("header.css");
+@import url("components.css");
+
+/********************** search **********************/
+.search {
+  position: relative;
+  padding-bottom: 20px;
+}
+.search input {
+  width: 100%;
+  height: 69px;
+  border-radius: 6px;
+  background-color: #e7e7e7;
+  padding-top: 7px;
+  padding-left: 22px;
+  border: none;
+}
+.search input::placeholder {
+  color: #adadad; /*#e7e7e7*/
+  font-size: 1.35em;
+}
+.search img {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+}
+
+/********************** tags **********************/
+.sectionTags {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5px;
+}
+.btnTag img {
+  pointer-events: none;
+}
+
+/********************** filtres **********************/
+.sectionFiltres {
+  display: flex;
+  justify-content: flex-start;
+}
+.sectionFiltres input:hover {
+  cursor: pointer;
+}
+.colorIngredient {
+  background-color: #3282f7;
+}
+.colorAppareil {
+  background-color: #68d9a4;
+}
+.colorUstensil {
+  background-color: #ed6454;
+}
+
+/********************** boutons filtres **********************/
+.disappear {
+  display: none;
+}
+.disappear.appear {
+  display: flex;
+}
+.widthFilter {
+  width: 54%;
+}
+.btnFilter {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.btnFilter span {
+  text-align: center;
+}
+.btnFilter img {
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  pointer-events: none;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.btnFilter input {
+  width: 100%;
+  height: 70px;
+  padding: 0 60px 0 17px;
+
+  border-radius: 6px;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+.btnFilter input::placeholder {
+  color: rgba(231, 231, 231, 0.5); /* rgb(127, 176, 250) */
+}
+/* retire barre de scroll 'x'du champ input from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+.btnFilter ul {
+  position: absolute;
+  top: 66px;
+  left: 0px;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-height: 400px;
+  padding: 0px 0px 10px 0px;
+  margin: 0px;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 0px 0px 6px 6px;
+}
+.btnFilter ul li {
+  width: 30%;
+  padding-left: 3%;
+  padding-bottom: 10px;
+  font-weight: normal;
+}
+.btnFilter #ingredientList {
+  background-color: #3282f7;
+}
+.btnFilter #appareilList {
+  background-color: #68d9a4;
+}
+.btnFilter #ustensilList {
+  background-color: #ed6454;
+}
+.noFilter {
+  font-weight: normal;
+  padding: 0 0 17px 17px;
+}
+.itemLiFilter {
+  transform: scale(1);
+}
+.itemLiFilter:hover {
+  cursor: pointer;
+  transform: scale(1.09) translateX(6px);
+  transition: transform 0.1s linear;
+}
+
+/********************** articles recettes **********************/
+.sectionRecettes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+article {
+  height: 365px;
+  width: 30.5%;
+  margin-bottom: 50px;
+}
+.imgRecette {
+  height: 178px;
+  background-color: #c7bebe;
+  border-radius: 6px 6px 0 0;
+}
+.legende {
+  height: 145px;
+  background-color: #e7e7e7;
+  border-radius: 0 0 6px 6px;
+  padding: 19px 22px 22px 22px;
+}
+.titre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+}
+.titre span {
+  font-weight: bold;
+  font-size: 1.1em;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+}
+.titre span img {
+  padding-right: 7px;
+}
+.titre h2 {
+  font-size: 1.1em;
+  font-weight: normal;
+  margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.description {
+  display: flex;
+  justify-content: space-between;
+}
+.description ul {
+  width: 46%;
+  padding: 0 4% 0 0;
+  margin: 0;
+  font-size: 0.78em;
+}
+.description ul li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.description ul li span {
+  font-weight: bold;
+}
+.description p {
+  height: 102px;
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.78em;
+  margin: 0;
+  line-height: 14.5px;
+  /* line clamp: ellipsis sur multilignes (6 et 91) */
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+}
+
+/********************** medias queries **********************/
+
+@media screen and (max-width: 1300px) {
+  .wrapper {
+    padding: 30px 30px 0px 30px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  article {
+    width: 48%;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .sectionFiltres {
+    flex-direction: column;
+  }
+  .btnFilter {
+    width: 100%;
+    height: unset;
+    flex-direction: column;
+  }
+
+  .btnFilter ul {
+    position: static;
+  }
+}
+@media screen and (max-width: 790px) {
+  article {
+    width: 100%;
+  }
+}
